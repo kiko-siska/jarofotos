@@ -42,7 +42,7 @@ h1,h2{font-size:clamp(38px,6.2vw,80px)}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid var(--ink);border-radius:3px;background:var(--ink);color:var(--bg);font:600 16px/1.2 var(--sans);text-align:center;text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
-.btn:hover{background:none;border-color:var(--coral);color:var(--coral)}
+.btn:hover{background:var(--coral);border-color:var(--coral);color:var(--coral-ink)}
 .btn.ghost{background:none;color:var(--ink)}
 .btn.ghost:hover{background:var(--bg);border-color:var(--bg);color:var(--ink)}
 .btn[disabled]{opacity:.6;cursor:progress}

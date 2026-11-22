@@ -9,7 +9,7 @@
   var TITLE = document.title;
   var lastCat = null; // category whose view is open, to return to it on Back
 
-  JFLightbox({ selector: 'a[data-lightbox]' });
+  JFLightbox({ selector: 'a[data-lightbox]', download: true, downloadIcon: true, captions: false });
 
   // ---------- menu: mark the section in view, keep the marked link visible in the scrolling row ----------
   var links = [].slice.call(menu.querySelectorAll('a[href^="#"]'));
@@ -65,7 +65,6 @@
       var a = document.createElement('a');
       a.href = t.getAttribute('href');
       a.setAttribute('data-lightbox', '');
-      a.setAttribute('data-caption', t.getAttribute('data-caption') || '');
       var img = t.querySelector('img').cloneNode(true);
       img.sizes = '(min-width: 1160px) 360px, (min-width: 600px) 50vw, 100vw';
       a.appendChild(img);

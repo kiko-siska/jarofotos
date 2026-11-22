@@ -8,7 +8,8 @@
   var ICON = {
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5L8 12l6.5 6.5"/></svg>',
-    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5L16 12l-6.5 6.5"/></svg>'
+    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5L16 12l-6.5 6.5"/></svg>',
+    download: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>'
   };
 
   function init(options) {
@@ -19,6 +20,7 @@
     var dlg, img, cap, count, dl;
     var items = [];
     var idx = 0;
+    var showCaptions = o.captions !== false;
 
     // built on first use, so the page carries no empty dialog or image until someone opens a photo
     function build() {
@@ -28,7 +30,7 @@
       dlg.setAttribute('aria-label', 'Fotografia vo veľkom');
       dlg.innerHTML =
         '<div class="lb__stage"><img class="lb__img" alt=""></div>' +
-        '<div class="lb__bar"><p class="lb__cap" aria-live="polite"></p><p class="lb__count"></p></div>' +
+        '<div class="lb__bar">' + (showCaptions ? '<p class="lb__cap" aria-live="polite"></p>' : '') + '<p class="lb__count"></p></div>' +
         '<button class="lb__btn lb__close" type="button" aria-label="Zavrieť">' + ICON.close + '</button>' +
         '<button class="lb__btn lb__prev" type="button" aria-label="Predchádzajúca fotka">' + ICON.prev + '</button>' +
         '<button class="lb__btn lb__next" type="button" aria-label="Ďalšia fotka">' + ICON.next + '</button>';
@@ -39,8 +41,13 @@
       // opt-in (direction 5's client galleries): a download link for photos whose link carries data-download
       if (o.download) {
         dl = document.createElement('a');
-        dl.className = 'lb__dl';
-        dl.textContent = o.downloadLabel || 'Stiahnuť fotku';
+        dl.className = 'lb__dl' + (o.downloadIcon ? ' lb__dl--icon' : '');
+        if (o.downloadIcon) {
+          dl.innerHTML = ICON.download;
+          dl.setAttribute('aria-label', o.downloadLabel || 'Stiahnuť fotku');
+        } else {
+          dl.textContent = o.downloadLabel || 'Stiahnuť fotku';
+        }
         dl.setAttribute('download', '');
         dl.hidden = true;
         dlg.querySelector('.lb__bar').appendChild(dl);
@@ -83,10 +90,10 @@
       var thumb = a.querySelector('img');
       img.src = a.getAttribute('href');
       img.alt = thumb ? thumb.alt : '';
-      cap.textContent = a.getAttribute('data-caption') || '';
+      if (cap) cap.textContent = a.getAttribute('data-caption') || '';
       count.textContent = (idx + 1) + ' / ' + items.length;
       if (dl) {
-        var href = a.getAttribute('data-download');
+        var href = a.getAttribute('data-download') || a.getAttribute('href');
         dl.hidden = !href;
         if (href) dl.href = href;
       }

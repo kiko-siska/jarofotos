@@ -14,15 +14,16 @@
   var TIMEOUT_MS = 25000; // an Apps Script cold start can take several seconds
   var TITLE = document.title;
   var SIZES = '(min-width: 1160px) 210px, (min-width: 900px) 22vw, 50vw'; // tiles: 2 columns on phones, 4-5 from 900 px
-  var DL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>';
 
   var $ = function (id) { return document.getElementById(id); };
   var lockView = $('lock'), openView = $('open'), form = $('code-form'), input = $('code-input'), submit = $('code-submit');
-  var err = $('code-err'), statusEl = $('status'), retry = $('retry'), grid = $('grid'), heading = $('h-open');
+  var err = $('code-err'), statusEl = $('status'), retry = $('retry'), grid = $('grid'), heading = $('h-open'), all = $('all');
   var current = ''; // code of the open gallery
   var pending = ''; // code being loaded
+  var galleryPhotos = []; // photos in the open gallery, used by the "Stiahnuť galériu" button
+  var allFolder = ''; // Google Drive folder URL when the API supplies one
 
-  JFLightbox({ selector: '#grid a[data-lightbox]', download: true });
+  JFLightbox({ selector: '#grid a[data-lightbox]', download: true, downloadIcon: true, captions: false });
   if (!API) $('demo-note').hidden = false;
 
   // ---------- helpers ----------
@@ -125,6 +126,144 @@
     input.removeAttribute('aria-invalid');
   }
 
+  // ---------- ZIP export (store, no compression: the photos are already compressed WebP/JPEG) ----------
+  var CRC_TABLE = (function () {
+    var t = new Uint32Array(256);
+    for (var n = 0; n < 256; n++) {
+      var c = n;
+      for (var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+
+  function crc32(data) {
+    var c = 0xFFFFFFFF;
+    for (var i = 0; i < data.length; i++) c = CRC_TABLE[(c ^ data[i]) & 0xFF] ^ (c >>> 8);
+    return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+
+  function makeZip(files) {
+    var localParts = [], centralParts = [], offset = 0, centralSize = 0;
+    var enc = new TextEncoder();
+    files.forEach(function (f) {
+      var name = enc.encode(f.name);
+      var data = f.data;
+      var crc = crc32(data);
+
+      var local = new Uint8Array(30 + name.length);
+      var lv = new DataView(local.buffer);
+      lv.setUint32(0, 0x04034b50, true);
+      lv.setUint16(4, 20, true);
+      lv.setUint16(6, 0, true);
+      lv.setUint16(8, 0, true);
+      lv.setUint16(10, 0, true);
+      lv.setUint16(12, 0x21, true);
+      lv.setUint32(14, crc, true);
+      lv.setUint32(18, data.length, true);
+      lv.setUint32(22, data.length, true);
+      lv.setUint16(26, name.length, true);
+      lv.setUint16(28, 0, true);
+      local.set(name, 30);
+
+      var central = new Uint8Array(46 + name.length);
+      var cv = new DataView(central.buffer);
+      cv.setUint32(0, 0x02014b50, true);
+      cv.setUint16(4, 20, true);
+      cv.setUint16(6, 20, true);
+      cv.setUint16(8, 0, true);
+      cv.setUint16(10, 0, true);
+      cv.setUint16(12, 0, true);
+      cv.setUint16(14, 0x21, true);
+      cv.setUint32(16, crc, true);
+      cv.setUint32(20, data.length, true);
+      cv.setUint32(24, data.length, true);
+      cv.setUint16(28, name.length, true);
+      cv.setUint16(30, 0, true);
+      cv.setUint16(32, 0, true);
+      cv.setUint16(34, 0, true);
+      cv.setUint16(36, 0, true);
+      cv.setUint32(38, 0, true);
+      cv.setUint32(42, offset, true);
+      central.set(name, 46);
+
+      localParts.push(local, data);
+      centralParts.push(central);
+      offset += local.length + data.length;
+      centralSize += central.length;
+    });
+
+    var end = new Uint8Array(22);
+    var ev = new DataView(end.buffer);
+    ev.setUint32(0, 0x06054b50, true);
+    ev.setUint16(4, 0, true);
+    ev.setUint16(6, 0, true);
+    ev.setUint16(8, files.length, true);
+    ev.setUint16(10, files.length, true);
+    ev.setUint32(12, centralSize, true);
+    ev.setUint32(16, offset, true);
+    ev.setUint16(20, 0, true);
+
+    return new Blob(localParts.concat(centralParts, [end]), { type: 'application/zip' });
+  }
+
+  function zipName(p, i, url) {
+    var fromUrl = '';
+    try { fromUrl = decodeURIComponent(new URL(url, location.href).pathname.split('/').pop() || ''); } catch (e) {}
+    var ext = (fromUrl.match(/\.([a-z0-9]{2,5})$/i) || [])[1] || 'jpg';
+    var base = (p.name || fromUrl || ('fotka-' + (i + 1)))
+      .replace(/\.[a-z0-9]{2,5}$/i, '')
+      .replace(/[^a-z0-9-_]+/gi, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 60) || ('fotka-' + (i + 1));
+    return (i + 1) + '-' + base + '.' + ext.toLowerCase();
+  }
+
+  function saveBlob(blob, name) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 30000);
+  }
+
+  function downloadAll() {
+    if (!galleryPhotos.length) return;
+    all.disabled = true;
+    all.textContent = 'Pripravujem ZIP…';
+
+    Promise.all(galleryPhotos.map(function (p, i) {
+      var url = p.dl || p.full;
+      return fetch(url, { cache: 'no-store' }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.arrayBuffer();
+      }).then(function (buf) {
+        return { name: zipName(p, i, url), data: new Uint8Array(buf) };
+      });
+    })).then(function (files) {
+      saveBlob(makeZip(files), 'jarofotos-galeria.zip');
+      all.textContent = 'Stiahnuť galériu';
+      all.disabled = false;
+    }, function () {
+      all.textContent = 'Stiahnuť galériu';
+      all.disabled = false;
+      if (allFolder) window.open(allFolder, '_blank', 'noopener');
+      else galleryPhotos.forEach(function (p) {
+        var url = p.dl || p.full;
+        if (!url) return;
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+    });
+  }
+
   function showLock(code) {
     openView.hidden = true;
     lockView.hidden = false;
@@ -134,7 +273,7 @@
     if (code !== undefined) input.value = code;
   }
 
-  function tile(p, i) {
+  function tile(p) {
     var fig = document.createElement('figure');
     fig.className = 'tile';
 
@@ -142,7 +281,6 @@
     a.className = 'tile__open';
     a.href = p.full;
     a.setAttribute('data-lightbox', '');
-    a.setAttribute('data-caption', p.name);
     if (p.dl) a.setAttribute('data-download', p.dl);
 
     var img = document.createElement('img');
@@ -169,15 +307,6 @@
     a.appendChild(img);
     fig.appendChild(a);
 
-    if (p.dl) {
-      var d = document.createElement('a');
-      d.className = 'tile__dl';
-      d.href = p.dl;
-      d.setAttribute('download', '');
-      d.setAttribute('aria-label', 'Stiahnuť ' + (p.name ? p.name : 'fotku ' + (i + 1)));
-      d.innerHTML = DL_ICON;
-      fig.appendChild(d);
-    }
     return fig;
   }
 
@@ -186,6 +315,7 @@
     var photos = list.map(function (p, i) { return toPhoto(p || {}, i, list.length); }).filter(function (p) { return p.src; });
     var title = String(g.title || 'Vaše fotky');
     current = code;
+    galleryPhotos = photos;
 
     heading.textContent = title;
     document.title = title + ' – Jarofotos';
@@ -194,13 +324,12 @@
     $('demo-banner').hidden = !!API;
 
     var folder = safeUrl(g.folder);
-    var all = $('all');
-    all.hidden = !(folder && photos.length);
-    if (folder) all.href = folder;
+    allFolder = folder;
+    all.hidden = photos.length === 0;
 
     grid.textContent = '';
     var frag = document.createDocumentFragment();
-    photos.forEach(function (p, i) { frag.appendChild(tile(p, i)); });
+    photos.forEach(function (p) { frag.appendChild(tile(p)); });
     grid.appendChild(frag);
     $('empty').hidden = photos.length > 0;
 
@@ -251,11 +380,7 @@
   });
   input.addEventListener('input', clearError);
   retry.addEventListener('click', function () { unlock(input.value); });
-  $('relock').addEventListener('click', function () {
-    showLock('');
-    history.replaceState(null, '', location.pathname);
-    input.focus();
-  });
+  all.addEventListener('click', downloadAll);
   window.addEventListener('hashchange', function () {
     var c = codeFromUrl();
     if (c && norm(c) !== current) unlock(c);

@@ -196,7 +196,6 @@
     var folder = safeUrl(g.folder);
     var all = $('all');
     all.hidden = !(folder && photos.length);
-    $('all-tip').hidden = all.hidden;
     if (folder) all.href = folder;
 
     grid.textContent = '';

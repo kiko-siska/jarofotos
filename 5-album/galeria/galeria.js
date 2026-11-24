@@ -13,7 +13,8 @@
   var DEMO_CODE = 'UKAZKA';
   var TIMEOUT_MS = 25000; // an Apps Script cold start can take several seconds
   var TITLE = document.title;
-  var SIZES = '(min-width: 1160px) 210px, (min-width: 900px) 22vw, 50vw'; // tiles: 2 columns on phones, 4-5 from 900 px
+  var SIZES = '(min-width: 1160px) 266px, (min-width: 600px) 22vw, 45vw'; // 4 columns, 2 on phones
+  var small = window.matchMedia('(max-width: 600px)');
 
   var $ = function (id) { return document.getElementById(id); };
   var lockView = $('lock'), openView = $('open'), form = $('code-form'), input = $('code-input'), submit = $('code-submit');
@@ -310,6 +311,33 @@
     return fig;
   }
 
+  // Same balanced deal as the category gallery: one photo per column per row, tallest into the
+  // shortest column, with data-order assigned by visual row so the lightbox arrows follow it.
+  function renderGrid() {
+    var n = small.matches ? 2 : 4;
+    var figs = galleryPhotos.map(function (p) { return tile(p); });
+    var cols = JFBalanceColumns(figs, n, function (fig) {
+      var img = fig.querySelector('img');
+      return 1 / (img.width && img.height ? img.width / img.height : 1);
+    });
+    var order = 0, r, c;
+    for (r = 0; r * n < figs.length; r++) {
+      for (c = 0; c < n; c++) if (cols[c][r]) cols[c][r].querySelector('a').setAttribute('data-order', order++);
+    }
+    grid.textContent = '';
+    var frag = document.createDocumentFragment();
+    for (c = 0; c < n; c++) {
+      var col = document.createElement('div');
+      col.className = 'masonry__col';
+      cols[c].forEach(function (fig) { col.appendChild(fig); });
+      frag.appendChild(col);
+    }
+    grid.appendChild(frag);
+  }
+  function onBreakpoint() { if (!openView.hidden && current) renderGrid(); }
+  if (small.addEventListener) small.addEventListener('change', onBreakpoint);
+  else if (small.addListener) small.addListener(onBreakpoint);
+
   function showGallery(g, code) {
     var list = g.photos || [];
     var photos = list.map(function (p, i) { return toPhoto(p || {}, i, list.length); }).filter(function (p) { return p.src; });
@@ -327,10 +355,7 @@
     allFolder = folder;
     all.hidden = photos.length === 0;
 
-    grid.textContent = '';
-    var frag = document.createDocumentFragment();
-    photos.forEach(function (p) { frag.appendChild(tile(p)); });
-    grid.appendChild(frag);
+    renderGrid();
     $('empty').hidden = photos.length > 0;
 
     lockView.hidden = true;

@@ -57,33 +57,39 @@
   }
 
   // ---------- his category view: #kat-<section id> shows every photo of that category ----------
-  // Only this full-category gallery gets the new treatment. Photos are dealt into columns
-  // round-robin: the first row reads left-to-right in camera order, while each column still
-  // packs by the photos' own ratios. data-order keeps the lightbox in that same row order.
+  // Only this full-category gallery gets the new treatment. One photo per column per row, placed
+  // into the shortest column first, keeps the column counts within one and the bottoms close.
+  // data-order is assigned by visual row so the lightbox arrows read left-to-right too.
   var small = window.matchMedia('(max-width: 600px)');
   var SIZES = '(min-width: 1160px) 266px, (min-width: 600px) 22vw, 45vw';
   function renderGrid(sec) {
     var grid = $('kat-grid');
     var photos = [].slice.call(sec.querySelectorAll('.strip a.t'));
     var n = small.matches ? 2 : 4;
-    grid.textContent = '';
-    var cols = [], i;
-    for (i = 0; i < n; i++) {
-      var col = document.createElement('div');
-      col.className = 'masonry__col';
-      cols.push(col);
-      grid.appendChild(col);
-    }
-    photos.forEach(function (t, idx) {
+    var anchors = photos.map(function (t) {
       var a = document.createElement('a');
       a.href = t.getAttribute('href');
       a.setAttribute('data-lightbox', '');
-      a.setAttribute('data-order', idx);
       var img = t.querySelector('img').cloneNode(true);
       img.sizes = SIZES;
       a.appendChild(img);
-      cols[idx % n].appendChild(a);
+      return a;
     });
+    var cols = JFBalanceColumns(anchors, n, function (a) {
+      var img = a.querySelector('img');
+      return 1 / (img.width && img.height ? img.width / img.height : 1);
+    });
+    var order = 0, r, c;
+    for (r = 0; r * n < anchors.length; r++) {
+      for (c = 0; c < n; c++) if (cols[c][r]) cols[c][r].setAttribute('data-order', order++);
+    }
+    grid.textContent = '';
+    for (c = 0; c < n; c++) {
+      var col = document.createElement('div');
+      col.className = 'masonry__col';
+      cols[c].forEach(function (a) { col.appendChild(a); });
+      grid.appendChild(col);
+    }
     return photos.length;
   }
   function onBreakpoint() { if (!view.hidden && lastCat) renderGrid(lastCat); }

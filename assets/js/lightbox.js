@@ -133,4 +133,26 @@
   }
 
   window.JFLightbox = init;
+
+  // Deal items into n columns: one item per column per row, with the tallest item in each row
+  // going to the currently shortest column. Counts stay within one item, but the column bottoms
+  // line up far better than with a plain round-robin deal. Returns columns of items.
+  window.JFBalanceColumns = function (items, n, heightOf) {
+    var cols = [], heights = [], r, i, c;
+    for (i = 0; i < n; i++) { cols.push([]); heights.push(0); }
+    for (r = 0; r * n < items.length; r++) {
+      var row = [];
+      for (i = r * n; i < Math.min((r + 1) * n, items.length); i++) row.push({ item: items[i], h: heightOf(items[i]) });
+      row.sort(function (a, b) { return b.h - a.h; });
+      // shortest columns first, one photo per column in this row (ties keep column order)
+      var targets = [];
+      for (c = 0; c < n; c++) targets.push(c);
+      targets.sort(function (a, b) { return (heights[a] - heights[b]) || (a - b); });
+      for (i = 0; i < row.length; i++) {
+        cols[targets[i]].push(row[i].item);
+        heights[targets[i]] += row[i].h;
+      }
+    }
+    return cols;
+  };
 })();

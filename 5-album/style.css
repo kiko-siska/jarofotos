@@ -87,6 +87,8 @@ html:not(.js) .cat-all{display:none}
 .t img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .t:hover img{transform:scale(1.05)}
 .t:focus-visible{outline-offset:3px}
+/* photos beyond the five slots: kept in the page for the category view; with JS off they simply show as more tiles */
+.js .t.more{display:none}
 .t.ph{display:grid;place-items:center;border:1px dashed var(--line);color:var(--mute);font-size:13px;cursor:default}
 
 /* ---------- category view (his #kat-...) ---------- */

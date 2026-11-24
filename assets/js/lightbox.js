@@ -82,6 +82,13 @@
       items = Array.prototype.filter.call(document.querySelectorAll(selector), function (a) {
         return !a.closest('[hidden]');
       });
+      // Some grids (direction 5's category view) are dealt into columns for layout, so DOM order
+      // is column-major. When links carry data-order, navigate in that source order instead.
+      if (items.length && items[0].hasAttribute('data-order')) {
+        items.sort(function (a, b) {
+          return (+a.getAttribute('data-order')) - (+b.getAttribute('data-order'));
+        });
+      }
     }
 
     function show(i) {

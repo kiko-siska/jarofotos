@@ -57,22 +57,44 @@
   }
 
   // ---------- his category view: #kat-<section id> shows every photo of that category ----------
-  function showCategory(sec) {
+  // Only this full-category gallery gets the new treatment. Photos are dealt into columns
+  // round-robin: the first row reads left-to-right in camera order, while each column still
+  // packs by the photos' own ratios. data-order keeps the lightbox in that same row order.
+  var small = window.matchMedia('(max-width: 600px)');
+  var SIZES = '(min-width: 1160px) 266px, (min-width: 600px) 22vw, 45vw';
+  function renderGrid(sec) {
     var grid = $('kat-grid');
     var photos = [].slice.call(sec.querySelectorAll('.strip a.t'));
+    var n = small.matches ? 2 : 4;
     grid.textContent = '';
-    photos.forEach(function (t) {
+    var cols = [], i;
+    for (i = 0; i < n; i++) {
+      var col = document.createElement('div');
+      col.className = 'masonry__col';
+      cols.push(col);
+      grid.appendChild(col);
+    }
+    photos.forEach(function (t, idx) {
       var a = document.createElement('a');
       a.href = t.getAttribute('href');
       a.setAttribute('data-lightbox', '');
+      a.setAttribute('data-order', idx);
       var img = t.querySelector('img').cloneNode(true);
-      img.sizes = '(min-width: 1160px) 360px, (min-width: 600px) 50vw, 100vw';
+      img.sizes = SIZES;
       a.appendChild(img);
-      grid.appendChild(a);
+      cols[idx % n].appendChild(a);
     });
+    return photos.length;
+  }
+  function onBreakpoint() { if (!view.hidden && lastCat) renderGrid(lastCat); }
+  if (small.addEventListener) small.addEventListener('change', onBreakpoint);
+  else if (small.addListener) small.addListener(onBreakpoint);
+
+  function showCategory(sec) {
+    var count = renderGrid(sec);
     var name = sec.querySelector('h2').textContent;
     $('kat-title').textContent = name;
-    $('kat-count').textContent = 'Počet fotografií: ' + photos.length;
+    $('kat-count').textContent = 'Počet fotografií: ' + count;
     $('kat-back').href = '#' + sec.id;
     lastCat = sec;
     home.hidden = true;

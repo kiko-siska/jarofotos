@@ -1,0 +1,1691 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Jarofotos | Fotograf Trnava: stužkové, svadby, festivaly",
+    "description": "Jaromír Marek (Jarofotos), fotograf z Trnavy. Fotím stužkové, svadby, festivaly a eventy. Pozrite si portfólio, galériu pre klientov a kontakt."
+  },
+  "menu": {
+    "logo": "Jarofotos",
+    "about": "O mne",
+    "client": "Vaša galéria",
+    "reviews": "Recenzie",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "heading": "Volám sa Jaro.",
+    "text": "Som z Trnavy a fotím eventy. Fotiť som začal, keď som mal 15 rokov a odvtedy je to neodmysliteľná súčasť môjho života. Venujem sa predovšetkým foteniu stužkových, svadieb, festivalov, firemných eventov a ostatných spoločenských udalostí. Ak chcete, aby aj vaše fotky naozaj vynikli, neváhajte ma kontaktovať. Teším sa na spoluprácu s vami!",
+    "portfolioButton": "Portfólio",
+    "contactButton": "Kontakt",
+    "portrait": {
+      "id": "portret-about",
+      "alt": "Portrét Jaromíra Marka.",
+      "w": 1080,
+      "h": 1350,
+      "widths": [
+        480,
+        960,
+        1080
+      ],
+      "color": "#f8e8c8"
+    }
+  },
+  "client": {
+    "heading": "Dostali ste kód?",
+    "text": "Zadajte ho sem a otvorí sa vám vaša galéria.",
+    "inputLabel": "Váš kód v tvare XXXX-0000",
+    "placeholder": "Váš kód",
+    "button": "Otvoriť galériu"
+  },
+  "labels": {
+    "showAll": "Zobraziť všetky ({n}) →",
+    "placeholderTile": "Ďalšia fotka",
+    "back": "← Späť na galériu",
+    "count": "Počet fotografií:"
+  },
+  "categories": [
+    {
+      "id": "stuzkove",
+      "name": "Stužkové",
+      "photos": [
+        {
+          "id": "stuzkove-8636",
+          "title": "Ochutnávka torty",
+          "place": "",
+          "alt": "Dievča v ružových šatách a mladý muž v čiernom saku so zelenou stužkou jedia z malých tortičiek, v pozadí zelené svetlo.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-8636"
+        },
+        {
+          "id": "stuzkove-3886",
+          "title": "Radosť v tanci",
+          "place": "",
+          "alt": "Mladý muž v bielej košeli a modrej kravate dvíha ruku s ukazovákom nad hlavu a smeje sa uprostred tanečnej zábavy.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#080808",
+          "file": "stuzkove-3886"
+        },
+        {
+          "id": "stuzkove-6459",
+          "title": "Tanec",
+          "place": "",
+          "alt": "Čiernobiela fotografia: žena v šatách a muž v obleku sa držia za ruky pri tanci, v pozadí ďalšie páry.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "stuzkove-6459"
+        },
+        {
+          "id": "stuzkove-5726",
+          "title": "Skupinová fotka",
+          "place": "",
+          "alt": "Skupina mladých ľudí v slávnostnom oblečení pózuje pred stenou zdobenou balónmi a svetelnými lampiónmi, vpredu sedí dievča.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8d8a8",
+          "file": "stuzkove-5726"
+        },
+        {
+          "id": "stuzkove-8683",
+          "title": "Svietiace písmená",
+          "place": "",
+          "alt": "Veľké čierne číslo a písmená so zapálenými sviečkami na stole v ružovom a fialovom svetle.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#180808",
+          "file": "stuzkove-8683"
+        },
+        {
+          "id": "stuzkove-2319",
+          "title": "Pripínanie stužky",
+          "place": "",
+          "alt": "Žena v sivej blúzke pripína mladíkovi v modrom obleku zelenú stužku, v pozadí sála so závesnými lampiónmi.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#282828",
+          "file": "stuzkove-2319"
+        },
+        {
+          "id": "stuzkove-2369",
+          "title": "Slávnostné šaty",
+          "place": "",
+          "alt": "Dievča v svetlých trblietavých šatách so zelenou stužkou sa usmieva do objektívu, za ním stojí žena chrbtom, nad nimi visia lampióny.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#983808",
+          "file": "stuzkove-2369"
+        },
+        {
+          "id": "stuzkove-2815",
+          "title": "Slávnostný stôl",
+          "place": "",
+          "alt": "Pohľad zblízka na stôl s pohármi červeného nápoja, drobnou tabuľkou a rukami hostí.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8d8",
+          "file": "stuzkove-2815"
+        },
+        {
+          "id": "stuzkove-2957",
+          "title": "Pri bare",
+          "place": "",
+          "alt": "Čiernobiela fotografia: smejúce sa dievča s rukou pri tvári a mladý muž v saku stoja pri bare.",
+          "w": 1462,
+          "h": 2193,
+          "widths": [
+            480,
+            960,
+            1462
+          ],
+          "color": "#d8d8d8",
+          "file": "stuzkove-2957"
+        },
+        {
+          "id": "stuzkove-3087",
+          "title": "Stužkovanie",
+          "place": "",
+          "alt": "Muž v sivom saku a žena v svetlozelenom saku stoja oproti sebe a držia sa za ruky, okolo nich hostia v sále.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#382828",
+          "file": "stuzkove-3087"
+        },
+        {
+          "id": "stuzkove-3158",
+          "title": "Hostia",
+          "place": "",
+          "alt": "Skupina hostí v slávnostnom oblečení stojí v rade na parkete a usmieva sa do objektívu.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-3158"
+        },
+        {
+          "id": "stuzkove-3503",
+          "title": "Dezerty",
+          "place": "",
+          "alt": "Zlatý podnos s malými ružovými dezertmi s malinou a čokoládovou ozdobou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8d8d8",
+          "file": "stuzkove-3503"
+        },
+        {
+          "id": "stuzkove-3532",
+          "title": "Tortičky",
+          "place": "",
+          "alt": "Ruky hostí držia malé torty so žltým krémom a kvetom na vrchu.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "stuzkove-3532"
+        },
+        {
+          "id": "stuzkove-3911",
+          "title": "Tanec",
+          "place": "",
+          "alt": "Dvojica tancuje pri modrom a zelenom osvetlení, za nimi stoja hostia.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#082818",
+          "file": "stuzkove-3911"
+        },
+        {
+          "id": "stuzkove-5512",
+          "title": "Prestretý stôl",
+          "place": "",
+          "alt": "Slávnostný stôl so zelenými servítkami, zlatými tanierikmi, pohármi a sušenými trávami uprostred.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "stuzkove-5512"
+        },
+        {
+          "id": "stuzkove-5531",
+          "title": "Detail stola",
+          "place": "",
+          "alt": "Detail pohárov a zlatého taniera so zelenou servítkou na slávnostnom stole, vedľa stojí vizitka.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#383828",
+          "file": "stuzkove-5531"
+        },
+        {
+          "id": "stuzkove-5599",
+          "title": "Stôl v sále",
+          "place": "",
+          "alt": "Dlhý slávnostný stôl so zelenými obrusmi, zlatými tanierikmi a pohármi, pohľad pozdĺž stola.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#283828",
+          "file": "stuzkove-5599"
+        },
+        {
+          "id": "stuzkove-6232",
+          "title": "Pripínanie stužky",
+          "place": "",
+          "alt": "Mladík v tmavom obleku sklonil hlavu, žena v bordových šatách mu pripína stužku na sako.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#081818",
+          "file": "stuzkove-6232"
+        },
+        {
+          "id": "stuzkove-6382",
+          "title": "Príhovor",
+          "place": "",
+          "alt": "Žena s mikrofónom a zelenou šerpou hovorí k hosťom, za ňou stoja dievčatá v dlhých šatách.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#081818",
+          "file": "stuzkove-6382"
+        },
+        {
+          "id": "stuzkove-6404",
+          "title": "Prípitok",
+          "place": "",
+          "alt": "Ruky s pohármi bieleho vína nad slávnostným stolom v zelenom svetle.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#080808",
+          "file": "stuzkove-6404"
+        },
+        {
+          "id": "stuzkove-6409",
+          "title": "Prípitok",
+          "place": "",
+          "alt": "Mladí ľudia si pripíjajú pohármi vína pri stole, v pozadí zelené osvetlenie.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "stuzkove-6409"
+        },
+        {
+          "id": "stuzkove-6527",
+          "title": "Tanec",
+          "place": "",
+          "alt": "Čiernobiela fotografia: usmiata žena a mladý muž v obleku sa držia za ruky pri tanci.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#080808",
+          "file": "stuzkove-6527"
+        },
+        {
+          "id": "stuzkove-6694",
+          "title": "V sále",
+          "place": "",
+          "alt": "Muž v tmavom obleku a svetlej čiapke stojí v sále so zeleným osvetlením, vedľa neho svietia veľké písmená.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#382818",
+          "file": "stuzkove-6694"
+        },
+        {
+          "id": "stuzkove-6817",
+          "title": "Pri mikrofóne",
+          "place": "",
+          "alt": "Dievčatá v slávnostných šatách sa skláňajú nad stolíkom s projektorom, jedna drží mikrofón, nad nimi svietia girlandy.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-6817"
+        },
+        {
+          "id": "stuzkove-6848",
+          "title": "Hostia",
+          "place": "",
+          "alt": "Muž s bradou v obleku s mašľou a žena s červenými vlasmi v zelených šatách sedia pri stole a usmievajú sa.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#081818",
+          "file": "stuzkove-6848"
+        },
+        {
+          "id": "stuzkove-6909",
+          "title": "Vystúpenie",
+          "place": "",
+          "alt": "Mladí muži v bielych tričkách, pracovných náprsenkách a prilbách tancujú na parkete v zeleno osvetlenej sále.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#081818",
+          "file": "stuzkove-6909"
+        },
+        {
+          "id": "stuzkove-6997",
+          "title": "Smiech",
+          "place": "",
+          "alt": "Usmiaty muž v kockovanom saku sa smeje, v popredí sú rozmazané hlavy hostí.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "stuzkove-6997"
+        },
+        {
+          "id": "stuzkove-7677",
+          "title": "Spoločná fotka",
+          "place": "",
+          "alt": "Veľká skupina ľudí v slávnostnom oblečení pózuje pred stenou s balónmi, niektorí kľačia vpredu.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-7677"
+        },
+        {
+          "id": "stuzkove-8221",
+          "title": "Tanečný moment",
+          "place": "",
+          "alt": "Muž v obleku s červenou kravatou kľačí na parkete, okolo neho tlieskajú hostia v dlhých šatách.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#081818",
+          "file": "stuzkove-8221"
+        },
+        {
+          "id": "stuzkove-8634",
+          "title": "Torta",
+          "place": "",
+          "alt": "Dievča v červených trblietavých šatách so zelenou stužkou drží v rukách malú bielu tortu s ozdobným nápisom.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#380808",
+          "file": "stuzkove-8634"
+        },
+        {
+          "id": "stuzkove-dsc6277",
+          "title": "Radosť",
+          "place": "",
+          "alt": "Dve usmiate dievčatá v červených šatách pózujú pri tanci, vľavo je pohybom rozmazaná kaderoteň.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-DSC6277"
+        },
+        {
+          "id": "stuzkove-dsc6352",
+          "title": "Slávnostný nástup",
+          "place": "",
+          "alt": "Skupina mladých ľudí v slávnostnom oblečení stojí v rade za veľkými svetelnými písmenami.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "stuzkove-DSC6352"
+        }
+      ]
+    },
+    {
+      "id": "svadby",
+      "name": "Svadby",
+      "photos": [
+        {
+          "id": "svadby-7887",
+          "title": "Objatie",
+          "place": "",
+          "alt": "Ženích v modrom obleku objíma nevestu v bielych šatách, obaja hľadia do objektívu, v pozadí záhrada s plotom.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-7887"
+        },
+        {
+          "id": "svadby-9413",
+          "title": "Prvý tanec",
+          "place": "",
+          "alt": "Ženích a nevesta tancujú v modrom svetle a hmle, v pozadí sedia hostia.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#483828",
+          "file": "svadby-9413"
+        },
+        {
+          "id": "svadby-8061",
+          "title": "Čelo na čelo",
+          "place": "",
+          "alt": "Čiernobiela fotografia: nevesta so závojom a kyticou a ženích stoja tvárou k sebe a dotýkajú sa čelami.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-8061"
+        },
+        {
+          "id": "svadby-8005",
+          "title": "Kytica nad hlavou",
+          "place": "",
+          "alt": "Ženích drží nevestu a ona dvíha kyticu vysoko nad hlavu, v pozadí budova a stromy.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-8005"
+        },
+        {
+          "id": "svadby-8119",
+          "title": "Kytica",
+          "place": "",
+          "alt": "Ruka drží svadobnú kyticu z ružových kvetov proti modrej oblohe s oblakmi.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8119"
+        },
+        {
+          "id": "svadby-0143",
+          "title": "Za svadobným stolom",
+          "place": "",
+          "alt": "Usmiati hostia a mladomanželia sedia za svadobným stolom so zlatým dekorom a kyticou, v pozadí svetelná opona.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8e8",
+          "file": "svadby-0143"
+        },
+        {
+          "id": "svadby-0198",
+          "title": "Novomanželia",
+          "place": "",
+          "alt": "Nevesta v bielych šatách a ženích v modrej veste stoja na parkete v sále, pred nimi stojí muž chrbtom.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-0198"
+        },
+        {
+          "id": "svadby-0223",
+          "title": "Krájanie torty",
+          "place": "",
+          "alt": "Nevesta v bielych šatách krája žltú svadobnú tortu, vedľa nej stojí ženích a v pozadí hostia.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8e8e8",
+          "file": "svadby-0223"
+        },
+        {
+          "id": "svadby-7815",
+          "title": "Detail",
+          "place": "",
+          "alt": "Čiernobiela fotografia: nevesta so závojom sa dotýka pierka na saku ženícha.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-7815"
+        },
+        {
+          "id": "svadby-7829",
+          "title": "Pri aute",
+          "place": "",
+          "alt": "Ženích v modrom obleku sa opiera o otvorené dvierka auta ozdobeného bielou stuhou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-7829"
+        },
+        {
+          "id": "svadby-7876",
+          "title": "Bozk v záhrade",
+          "place": "",
+          "alt": "Nevesta v bielych šatách s kyticou a ženích v modrom obleku sa bozkávajú v záhrade medzi trávami.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-7876"
+        },
+        {
+          "id": "svadby-7936",
+          "title": "Ruka v ruke",
+          "place": "",
+          "alt": "Nevesta a ženích v modrom obleku kráčajú ruka v ruke pod oblačnou oblohou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-7936"
+        },
+        {
+          "id": "svadby-8079",
+          "title": "Vôňa kytice",
+          "place": "",
+          "alt": "Nevesta so závojom si privoniava ku kytici z ružových a bielych kvetov, v pozadí zeleň.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8079"
+        },
+        {
+          "id": "svadby-8157",
+          "title": "Detail kytice",
+          "place": "",
+          "alt": "Detail svadobnej kytice z ruží a drobných kvetov pri bielych šatách, v pozadí vysoká tráva.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-8157"
+        },
+        {
+          "id": "svadby-8204",
+          "title": "Odraz v aute",
+          "place": "",
+          "alt": "Svadobná kytica a biela stuha na kapote auta, v rozmazanom pozadí sa bozkáva pár.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8204"
+        },
+        {
+          "id": "svadby-8206",
+          "title": "Kytica a stuha",
+          "place": "",
+          "alt": "Kytica ruží a biele stuhy na kapote auta, za nimi sa v rozmazanom pozadí bozkáva pár.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8206"
+        },
+        {
+          "id": "svadby-8220",
+          "title": "Bozk pri aute",
+          "place": "",
+          "alt": "Čiernobiela fotografia: v pozadí sa bozkáva pár, v popredí leží kytica so stuhou na kapote auta.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8d8d8",
+          "file": "svadby-8220"
+        },
+        {
+          "id": "svadby-8527",
+          "title": "Hudobníci",
+          "place": "",
+          "alt": "Nevesta s kyticou a ženích v modrom obleku stoja v záhrade, za nimi hrajú hudobníci s husľami a harmonikou.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8527"
+        },
+        {
+          "id": "svadby-8544",
+          "title": "Skupinová fotka",
+          "place": "",
+          "alt": "Veľká skupina svadobných hostí s nevestou a ženíchom stojí na trávniku v záhrade a pózuje do objektívu.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8544"
+        },
+        {
+          "id": "svadby-8713",
+          "title": "Obrad",
+          "place": "",
+          "alt": "Kňaz v zlatom rúchu stojí pri oltári s bielym obrusom, v popredí kráča muž v modrom saku.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#084878",
+          "file": "svadby-8713"
+        },
+        {
+          "id": "svadby-8863",
+          "title": "Hostia",
+          "place": "",
+          "alt": "Usmiaty mladý muž v modrom obleku s červenou kravatou stojí medzi hosťami v záhrade.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#182838",
+          "file": "svadby-8863"
+        },
+        {
+          "id": "svadby-8932",
+          "title": "Selfie",
+          "place": "",
+          "alt": "Ženích, nevesta a družička v ružových šatách sa v záhrade fotia na telefón.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8e8e8",
+          "file": "svadby-8932"
+        },
+        {
+          "id": "svadby-8991",
+          "title": "Kamaráti",
+          "place": "",
+          "alt": "Skupina mužov v oblekoch drží vo vzduchu ležiaceho kamaráta, v pozadí ihrisko a stromy.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-8991"
+        },
+        {
+          "id": "svadby-9143",
+          "title": "Prípitok",
+          "place": "",
+          "alt": "Čiernobiela fotografia: ženích a nevesta s kyticou si pripíjajú pohármi medzi hosťami.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-9143"
+        },
+        {
+          "id": "svadby-9214",
+          "title": "Svadobný stôl",
+          "place": "",
+          "alt": "Hlavný svadobný stôl so zlatým dekorom, kvetmi a sviečkou, hostia sedia pod svetelnou oponou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8b8b8",
+          "file": "svadby-9214"
+        },
+        {
+          "id": "svadby-9238",
+          "title": "Prípitok",
+          "place": "",
+          "alt": "Hostia stoja za svadobným stolom a dvíhajú poháre, v pozadí svetelná opona.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8c8c8",
+          "file": "svadby-9238"
+        },
+        {
+          "id": "svadby-9329",
+          "title": "Tanec",
+          "place": "",
+          "alt": "Čiernobiela fotografia: ženích a nevesta tancujú v sále, v pozadí záves a svetielka.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#686868",
+          "file": "svadby-9329"
+        },
+        {
+          "id": "svadby-9669",
+          "title": "Zábava v sále",
+          "place": "",
+          "alt": "Nevesta v bielych šatách s nohou vo vzduchu sedí na parkete, v sále ju sledujú hostia.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "svadby-9669"
+        },
+        {
+          "id": "svadby-9740",
+          "title": "Hostia",
+          "place": "",
+          "alt": "Hostia dvíhajú ruky s topánkami, v pozadí sála s prestretými stolmi.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8e8",
+          "file": "svadby-9740"
+        }
+      ]
+    },
+    {
+      "id": "festivaly",
+      "name": "Festivaly",
+      "photos": [
+        {
+          "id": "festivaly-dsc8014",
+          "title": "Ruky hore",
+          "place": "Festival Lumen",
+          "alt": "Dav so zdvihnutými rukami a mobilmi stojí pred pódiom osvetleným oranžovými reflektormi.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-DSC8014"
+        },
+        {
+          "id": "festivaly-vp3788",
+          "title": "Huslista",
+          "place": "",
+          "alt": "Huslista v klobúku a čiernom roláku hrá na husle pred svetelnou konštrukciou pódia.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8d8d8",
+          "file": "festivaly-vp3788"
+        },
+        {
+          "id": "festivaly-dsc7042",
+          "title": "DJ v maske",
+          "place": "",
+          "alt": "DJ v maske dvíha ruku s mikrofónom za pultom, v červenom svetle a dyme.",
+          "w": 1600,
+          "h": 1065,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#585858",
+          "file": "festivaly-DSC7042"
+        },
+        {
+          "id": "festivaly-vp4667",
+          "title": "Gitarista",
+          "place": "",
+          "alt": "Čiernobiela fotografia: gitarista hrá pri mikrofóne, okolo neho dym a svetelné lúče.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-vp4667"
+        },
+        {
+          "id": "festivaly-dsc8160",
+          "title": "Večerný koncert",
+          "place": "Festival Lumen",
+          "alt": "Pohľad na zaplnený dav pred osvetleným pódiom počas večerného koncertu.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-DSC8160"
+        },
+        {
+          "id": "festivaly-dsc5085",
+          "title": "Folklórny tanec",
+          "place": "",
+          "alt": "Tanečník v ľudovom kroji a tanečnica v kvetovanej sukni a šatke sa držia pri tanci na pódiu.",
+          "w": 1600,
+          "h": 2405,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#282828",
+          "file": "festivaly-DSC5085"
+        },
+        {
+          "id": "festivaly-dsc7617",
+          "title": "Pred davom",
+          "place": "",
+          "alt": "Tri postavy v čiernom stoja na pódiu pred početným davom na námestí, v pozadí stromy a domy.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8f8f8",
+          "file": "festivaly-DSC7617"
+        },
+        {
+          "id": "festivaly-dsc7960",
+          "title": "Dav pred pódiom",
+          "place": "Festival Lumen",
+          "alt": "Dav s mobilmi nad hlavami stojí pred osvetleným pódiom s nápisom festivalu.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-DSC7960"
+        },
+        {
+          "id": "festivaly-dsc8060",
+          "title": "Dav",
+          "place": "",
+          "alt": "Ľudia v dave dvíhajú ruky pred pódiom osvetleným fialovým a ružovým svetlom.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#281818",
+          "file": "festivaly-DSC8060"
+        },
+        {
+          "id": "festivaly-dsc8456",
+          "title": "Gitarista na námestí",
+          "place": "",
+          "alt": "Gitarista v tmavom tričku hrá na pódiu pred davom na námestí.",
+          "w": 1600,
+          "h": 1065,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8b8a8",
+          "file": "festivaly-DSC8456"
+        },
+        {
+          "id": "festivaly-dsc8667",
+          "title": "S mikrofónom",
+          "place": "",
+          "alt": "Muž v bielej košeli s mikrofónom stojí na pódiu v červenom osvetlení, v popredí hlavy divákov.",
+          "w": 1600,
+          "h": 2405,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-DSC8667"
+        },
+        {
+          "id": "festivaly-dsc9008",
+          "title": "V reflektoroch",
+          "place": "",
+          "alt": "Muž v svetlom oblečení stojí na pódiu v reflektoroch a modrom dyme.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#182828",
+          "file": "festivaly-DSC9008"
+        },
+        {
+          "id": "festivaly-vp3789",
+          "title": "Husle",
+          "place": "",
+          "alt": "Muž v bielej košeli hrá na husle pri mikrofóne, v pozadí svetelná konštrukcia.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#c8d8d8",
+          "file": "festivaly-vp3789"
+        },
+        {
+          "id": "festivaly-vp3978",
+          "title": "Bubeník",
+          "place": "",
+          "alt": "Bradatý bubeník s okuliarmi hrá na bicie pri mikrofónoch.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "festivaly-vp3978"
+        },
+        {
+          "id": "festivaly-vp4635",
+          "title": "Klávesy",
+          "place": "",
+          "alt": "Klávesista stojí za klávesami medzi modrými a oranžovými svetelnými lúčmi.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#482828",
+          "file": "festivaly-vp4635"
+        },
+        {
+          "id": "festivaly-vp8349",
+          "title": "Basgitarista",
+          "place": "",
+          "alt": "Basgitarista v modrej košeli hrá na pódiu, za ním bicie a svetelná konštrukcia.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#282828",
+          "file": "festivaly-vp8349"
+        }
+      ]
+    },
+    {
+      "id": "hobby",
+      "name": "Hobby",
+      "photos": [
+        {
+          "id": "hobby-dsc0848",
+          "title": "Pražský hrad",
+          "place": "Praha",
+          "alt": "Pohľad cez rieku na Pražský hrad na kopci, po vode pláva výletná loď.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8c8b8",
+          "file": "hobby-DSC0848"
+        },
+        {
+          "id": "hobby-polnoc1352",
+          "title": "Pri západe slnka",
+          "place": "",
+          "alt": "Muž v tmavej bunde stojí s rukami vo vreckách na lúke, za ním žiari oranžové a fialové večerné nebo.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "hobby-polnoc1352"
+        },
+        {
+          "id": "hobby-dsc1607",
+          "title": "Búrka",
+          "place": "",
+          "alt": "Fialová búrková obloha s bleskom nad nočnou krajinou a svetlami obce v diaľke.",
+          "w": 1600,
+          "h": 800,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "hobby-DSC1607"
+        },
+        {
+          "id": "hobby-dsc6670",
+          "title": "Kalvária",
+          "place": "Banská Štiavnica",
+          "alt": "Kostol Kalvárie na kopci medzi lesmi, na svahoch leží sneh.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#888888",
+          "file": "hobby-DSC6670"
+        },
+        {
+          "id": "hobby-dsc3304",
+          "title": "Profil v zlatom svetle",
+          "place": "",
+          "alt": "Profil mladého muža s rozstrapatenými vlasmi v zlatom svetle zapadajúceho slnka.",
+          "w": 1600,
+          "h": 900,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#583818",
+          "file": "hobby-DSC3304"
+        },
+        {
+          "id": "hobby-dsc0869",
+          "title": "Katedrála svätého Víta",
+          "place": "Praha",
+          "alt": "Veže gotickej katedrály nad červenými strechami domov, v popredí lístie.",
+          "w": 1600,
+          "h": 1060,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#f8e8e8",
+          "file": "hobby-DSC0869"
+        },
+        {
+          "id": "hobby-dsc0994",
+          "title": "Čiernobiely portrét",
+          "place": "",
+          "alt": "Čiernobiela fotografia mladého muža v košeli, ktorý drží cigaretu pri ústach.",
+          "w": 1534,
+          "h": 2301,
+          "widths": [
+            480,
+            960,
+            1534
+          ],
+          "color": "#a8a8a8",
+          "file": "hobby-DSC0994"
+        },
+        {
+          "id": "hobby-dsc1613",
+          "title": "Portrét",
+          "place": "",
+          "alt": "Čiernobiely portrét ženy s kučeravými vlasmi, ktorá drží cigaretu pri ústach.",
+          "w": 1600,
+          "h": 1066,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#989898",
+          "file": "hobby-DSC1613"
+        },
+        {
+          "id": "hobby-dsc1778",
+          "title": "Večerná ulička",
+          "place": "",
+          "alt": "Úzka ulica osvetlená oranžovými lampami po zotmení, v diaľke veža a dve postavy.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#381818",
+          "file": "hobby-DSC1778"
+        },
+        {
+          "id": "hobby-dsc2728",
+          "title": "Turisti",
+          "place": "",
+          "alt": "Skupina turistov s batohmi kráča po lúke s kvetmi popri drevenom stĺpe so strieškou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#485828",
+          "file": "hobby-DSC2728"
+        },
+        {
+          "id": "hobby-dsc2845",
+          "title": "Na svahu",
+          "place": "",
+          "alt": "Turista v červenej bunde stúpa po skalnatom svahu pokrytom trávou.",
+          "w": 1600,
+          "h": 2401,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "hobby-DSC2845"
+        },
+        {
+          "id": "hobby-dsc2873",
+          "title": "Oddych v skalách",
+          "place": "",
+          "alt": "Usmiata žena v tmavom oblečení a čiapke sedí na trávnatých skalách.",
+          "w": 1600,
+          "h": 2400,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#282828",
+          "file": "hobby-DSC2873"
+        },
+        {
+          "id": "hobby-dsc3963",
+          "title": "Poľná cesta",
+          "place": "",
+          "alt": "Trávnatá cesta vedie medzi stromami k poliam, v pozadí obloha s oblakmi.",
+          "w": 1600,
+          "h": 2416,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#282818",
+          "file": "hobby-DSC3963"
+        },
+        {
+          "id": "hobby-dsc5013",
+          "title": "Súľovské skaly",
+          "place": "Súľovské skaly",
+          "alt": "Skalný útvar v teplom svetle, v popredí spadnutý strom a borovice.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#d8d8d8",
+          "file": "hobby-DSC5013"
+        },
+        {
+          "id": "hobby-bratislava19",
+          "title": "Most SNP",
+          "place": "Bratislava",
+          "alt": "Most so šikmým pylónom a vyhliadkovou vežou nad cestou plnou áut v zlatom svetle.",
+          "w": 1600,
+          "h": 2416,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#c8a888",
+          "file": "hobby-bratislava19"
+        },
+        {
+          "id": "hobby-polnoc1211",
+          "title": "Klasické auto",
+          "place": "",
+          "alt": "Svetlé klasické auto stojí na asfaltovej ploche pod modrou oblohou.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181828",
+          "file": "hobby-polnoc1211"
+        },
+        {
+          "id": "hobby-polnoc1259",
+          "title": "Prechádzka",
+          "place": "",
+          "alt": "Čiernobiela fotografia: dvaja muži v oblekoch kráčajú popri plechovej stene, jeden v čiernom a druhý v svetlom.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#383838",
+          "file": "hobby-polnoc1259"
+        },
+        {
+          "id": "hobby-polnoc1381",
+          "title": "Natáčanie",
+          "place": "",
+          "alt": "Muž v čiernej mikine si drží hlavu pri filmovej kamere na statíve, v pozadí stojí na budove ďalšia postava pod večerným nebom.",
+          "w": 1600,
+          "h": 1067,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#181818",
+          "file": "hobby-polnoc1381"
+        },
+        {
+          "id": "hobby-praha1",
+          "title": "Električka",
+          "place": "Praha",
+          "alt": "Červeno-žltá električka a auto na ulici so stromami v zlatom svetle.",
+          "w": 1600,
+          "h": 2416,
+          "widths": [
+            480,
+            960,
+            1600
+          ],
+          "color": "#e8b888",
+          "file": "hobby-praha1"
+        }
+      ]
+    }
+  ],
+  "reviews": {
+    "heading": "Recenzie",
+    "items": [
+      {
+        "name": "Monika & Ondrej",
+        "role": "",
+        "photo": "assets/img/review-monika.jpg",
+        "quote": "Ďakujeme Jarinovi za fotenie svadby, všetko prebehlo podľa dohody. Fotky sú kvalitné a pekne zachytávajú momenty celej udalosti. Dostali sme ich do týždňa. Odporúčam💪"
+      },
+      {
+        "name": "Mirka",
+        "role": "Oktáva A Gymnázium Sereď",
+        "photo": "assets/img/review-mirka.jpg",
+        "quote": "Fotky z našej stužkovej majú vysokú kvalitu: sú ostré, farebne vyvážené. Sú zachytené výnimočné a krásne momenty, ktoré by sme si sami ani nevšimli. Veľmi oceňujem aj to, ako sa Jaro vedel prispôsobiť situácii aj našim požiadavkám, vždy ostal pokojný a ústretový. Bez váhania ho odporúčam každému, kto hľadá fotografa, na ktorého sa môže spoľahnúť."
+      },
+      {
+        "name": "Dávid Durdjak",
+        "role": "filmový režisér",
+        "photo": "assets/img/review-david.jpg",
+        "quote": "S Jarom som robil a aj robím na niekolkých projektoch od fotenia filmových premietaní, po vizuálne kampane či portréty tímu našich projektov. Teším sa z našej dlhodobej kreatívnej spolupráce, ktorá je ešte len na začiatku."
+      }
+    ]
+  },
+  "contact": {
+    "intro": "Ak sa vám páči moja tvorba a chcete profesionálne a kvalitné fotky, na ktoré sa budete ešte dlho radi pozerať alebo máte otázky, neváhajte ma kontaktovať. Všetky podrobnosti dohodneme vopred, aby fotenie prebehlo v príjemnej a uvoľnenej atmosfére bez stresu.",
+    "heading": "Kontaktujte ma",
+    "items": [
+      {
+        "label": "Telefón",
+        "text": "+421 911 638 109",
+        "href": "tel:+421911638109"
+      },
+      {
+        "label": "E-mail",
+        "text": "jaromarekofficial@gmail.com",
+        "href": "mailto:jaromarekofficial@gmail.com"
+      },
+      {
+        "label": "Instagram",
+        "text": "@jarofotos",
+        "href": "https://www.instagram.com/jarofotos/"
+      },
+      {
+        "label": "Facebook",
+        "text": "Jaromír Marek",
+        "href": "https://www.facebook.com/jarohlicek/"
+      }
+    ]
+  },
+  "footer": {
+    "left": "© 2026 Jarofotos",
+    "right": "Všetky práva vyhradené."
+  },
+  "gallery": {
+    "title": "Vaša galéria – Jarofotos",
+    "description": "Súkromná galéria pre klientov fotografa Jaromíra Mareka (Jarofotos).",
+    "lockHeading": "Dostali ste kód?",
+    "lockIntro": "Zadajte ho sem a otvorí sa Vám Vaša galéria. Fotky si v nej pozriete a stiahnete.",
+    "inputLabel": "Váš kód",
+    "placeholder": "Váš kód v tvare XXXX-0000",
+    "submit": "Otvoriť galériu",
+    "note": "Fotky sú uložené na Google Disku. Stránka sa naň pripojí, až keď zadáte kód.",
+    "openHeading": "Vaše fotky",
+    "back": "← Späť na web",
+    "downloadAll": "Stiahnuť galériu",
+    "empty": "Fotky do tejto galérie ešte nahrávam. Skúste to neskôr, alebo mi napíšte na Instagram.",
+    "apiUrl": "",
+    "demo": [
+      {
+        "id": "svadobna-kytica",
+        "alt": "Ruka drží svadobnú kyticu z ružových ruží a drobných bielych kvietkov proti modrej oblohe s oblakmi.",
+        "w": 1440,
+        "h": 1920,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "portret-zapad",
+        "alt": "Muž v béžovej bunde sa pozerá nabok, za ním zlaté svetlo zapadajúceho slnka nad rovinou.",
+        "w": 1080,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1080
+        ]
+      },
+      {
+        "id": "stuzkova",
+        "alt": "Dievča v trblietavých šatách sa usmieva na ženu, ktorá ju drží okolo pliec, nad nimi visia sklenené lampióny.",
+        "w": 1440,
+        "h": 1920,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "sulovske-skaly",
+        "alt": "Skalný útvar v Súľovských skalách v teplom svetle, v popredí spadnutý strom a borovice.",
+        "w": 1440,
+        "h": 960,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "kalvaria",
+        "alt": "Červená Kalvária s dvoma vežami na kopci medzi zasneženými lesmi pri Banskej Štiavnici.",
+        "w": 1440,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "trnava-noc",
+        "alt": "Večerná ulica v historickom centre Trnavy osvetlená oranžovými lampami, v pozadí mestská veža.",
+        "w": 1080,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1080
+        ]
+      },
+      {
+        "id": "birmovka",
+        "alt": "Birmovanci v lavicách kostola, na lavicách červené stuhy, vpredu dvaja chlapci a dievča.",
+        "w": 1440,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "krajina-luka",
+        "alt": "Poľná cesta cez lúku k vinici a zvlnenej krajine, vľavo veľký strom a modrá obloha.",
+        "w": 1440,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "lumen-dav",
+        "alt": "Dav pred osvetleným pódiom na festivale Lumen, ľudia držia ruky a mobily vo vzduchu.",
+        "w": 1440,
+        "h": 1440,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      },
+      {
+        "id": "lumen-isaac",
+        "alt": "Spevák v tmavej bunde a farebných okuliaroch spieva do mikrofónu na pódiu festivalu Lumen.",
+        "w": 1440,
+        "h": 1920,
+        "widths": [
+          480,
+          960,
+          1440
+        ]
+      }
+    ]
+  }
+}

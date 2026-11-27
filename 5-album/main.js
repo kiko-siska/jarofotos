@@ -100,7 +100,8 @@
     var count = renderGrid(sec);
     var name = sec.querySelector('h2').textContent;
     $('kat-title').textContent = name;
-    $('kat-count').textContent = 'Počet fotografií: ' + count;
+    var cnt = $('kat-count');
+    cnt.textContent = (cnt.getAttribute('data-label') || 'Počet fotografií:') + ' ' + count;
     $('kat-back').href = '#' + sec.id;
     lastCat = sec;
     home.hidden = true;

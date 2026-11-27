@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://jarofotos.sk/">
+<meta name="author" content="Jaromír Marek">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jarofotos">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:url" content="https://jarofotos.sk/">
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:description" content="{{meta.description}}">
+<meta property="og:image" content="https://jarofotos.sk/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dav s rukami vo vzduchu pred osvetleným pódiom na festivale, fotografia Jaromíra Marka.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{meta.title}}">
+<meta name="twitter:description" content="{{meta.description}}">
+<meta name="twitter:image" content="https://jarofotos.sk/og-image.jpg">
+<meta name="theme-color" content="#141415">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="{{R}}assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{R}}assets/css/base.css">
+<link rel="stylesheet" href="style.css">
+<script>/* his fade-up reveal, switched on only when it can finish: JS on, IntersectionObserver present, motion allowed */
+document.documentElement.classList.add('js');
+if ('IntersectionObserver' in window && matchMedia('(prefers-reduced-motion: no-preference)').matches) document.documentElement.classList.add('rv-on');</script>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://jarofotos.sk/#website",
+    "url": "https://jarofotos.sk/",
+    "name": "Jarofotos",
+    "inLanguage": "sk",
+    "publisher": { "@id": "https://jarofotos.sk/#jaro" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://jarofotos.sk/#jaro",
+    "name": "Jaromír Marek",
+    "alternateName": "Jarofotos",
+    "jobTitle": "Fotograf",
+    "description": "Fotograf z Trnavy: stužkové, svadby, festivaly, firemné eventy a ostatné spoločenské udalosti.",
+    "url": "https://jarofotos.sk/",
+    "image": "https://jarofotos.sk/og-image.jpg",
+    "telephone": "+421911638109",
+    "email": "jaromarekofficial@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Trnava", "addressCountry": "SK" },
+    "knowsAbout": ["stužkové fotografie", "svadobná fotografia", "festivalová fotografia", "eventová fotografia"],
+    "sameAs": [
+      "https://www.instagram.com/jarofotos/",
+      "https://www.facebook.com/jarohlicek/"
+    ]
+  }
+]
+</script>
+</head>
+<body>
+<a class="skip" href="#{{categories.0.id}}">Preskočiť na fotografie</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top">{{menu.logo}}</a>
+    <nav class="menu" id="menu" aria-label="Hlavné menu">
+      <a href="#o-mne">{{menu.about}}</a><a href="#klient">{{menu.client}}</a>{{#categories}}<a href="#{{id}}">{{name}}</a>{{/categories}}{{#hasReviews}}<a href="#recenzie">{{menu.reviews}}</a>{{/hasReviews}}<a href="#kontakt">{{menu.contact}}</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div id="home">
+
+  <section class="about" id="o-mne" aria-labelledby="h-about"><div class="wrap about__grid">
+    <div class="portrait rev">{{{about.portraitHtml}}}</div>
+    <div class="rev">
+      <h1 id="h-about">{{about.heading}}</h1>
+      {{{paras about.text}}}
+      <div class="row"><a class="btn" href="#{{categories.0.id}}">{{about.portfolioButton}}</a><a class="btn ghost" href="#kontakt">{{about.contactButton}}</a></div>
+    </div>
+  </div></section>
+
+  <section class="klient" id="klient" aria-labelledby="h-klient"><div class="wrap kl">
+    <h2 class="rev" id="h-klient">{{client.heading}}</h2>
+    <p class="rev">{{client.text}}</p>
+    <form class="code rev" id="code-form" action="galeria/" method="get" novalidate>
+      <label class="sr-only" for="code-input">{{client.inputLabel}}</label>
+      <input class="code__input" id="code-input" name="kod" type="text" placeholder="{{client.placeholder}}" autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <button class="btn" type="submit">{{client.button}}</button>
+    </form>
+    <p class="err" id="code-err" role="alert" hidden></p>
+    <p class="kl__demo" id="code-demo" hidden>Ukážka: galéria ešte nie je prepojená s Google Diskom, funguje kód <b>UKAZKA</b>.</p>
+  </div></section>
+
+{{#categories}}
+  <section class="cat" id="{{id}}" aria-labelledby="h-{{id}}"><div class="wrap">
+    <div class="cat-head rev"><h2 id="h-{{id}}">{{name}}</h2><a class="cat-all" href="#kat-{{id}}">{{showAll}}</a></div>
+    <div class="strip">
+      {{{strip}}}
+    </div>
+  </div></section>
+
+{{/categories}}
+{{#hasReviews}}
+  <section class="reviews" id="recenzie" aria-labelledby="h-recenzie"><div class="wrap">
+    <h2 class="sr-only" id="h-recenzie">{{reviews.heading}}</h2>
+    <div class="reviews__grid">
+{{#reviews.items}}
+      <article class="review rev">
+        <div class="review__head">
+          <div class="review__avatar" aria-hidden="true">{{{avatar}}}</div>
+          <div class="review__id">
+            <p class="review__name">{{name}}</p>
+            <p class="review__role">{{role}}</p>
+          </div>
+        </div>
+        <blockquote class="review__quote">„{{quote}}“</blockquote>
+      </article>
+{{/reviews.items}}
+    </div>
+  </div></section>
+
+{{/hasReviews}}
+
+  <section class="contact" id="kontakt" aria-labelledby="h-contact"><div class="wrap c-grid">
+    <div class="rev">
+      <p class="c-intro">{{contact.intro}}</p>
+    </div>
+    <div class="rev">
+      <h2 id="h-contact">{{contact.heading}}</h2>
+      <ul class="c-list">
+{{#contact.items}}
+        <li><small>{{label}}</small><a href="{{href}}"{{{attrs}}}>{{text}}</a></li>
+{{/contact.items}}
+      </ul>
+    </div>
+  </div></section>
+
+</div>
+
+<section id="kat-view" aria-labelledby="kat-title" hidden><div class="wrap">
+  <a class="back" id="kat-back" href="#{{categories.0.id}}">{{labels.back}}</a>
+  <h1 id="kat-title" tabindex="-1"></h1>
+  <p class="n" id="kat-count" data-label="{{labels.count}}"></p>
+  <div class="masonry" id="kat-grid"></div>
+</div></section>
+</main>
+
+<div class="wrap"><footer class="foot"><span>{{footer.left}}</span><span>{{footer.right}}</span></footer></div>
+
+<script src="galeria/config.js"></script>
+<script src="{{R}}assets/js/lightbox.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

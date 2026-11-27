@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#141415">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="{{R}}assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{R}}assets/css/base.css">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>html:not(.js) .code{display:none}</style>
+</head>
+<body>
+<a class="skip" href="#gal">Preskočiť na galériu</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="../">{{menu.logo}}</a>
+    <nav class="menu" aria-label="Hlavné menu">
+      <a href="../#o-mne">{{menu.about}}</a><a href="./" aria-current="true">{{menu.client}}</a>{{#categories}}<a href="../#{{id}}">{{name}}</a>{{/categories}}<a href="../#kontakt">{{menu.contact}}</a>
+    </nav>
+  </div>
+</header>
+
+<main class="gal" id="gal">
+
+  <section class="gal__lock" id="lock" aria-labelledby="h-lock"><div class="wrap kl">
+    <h1 id="h-lock">{{gallery.lockHeading}}</h1>
+    <p>{{gallery.lockIntro}}</p>
+    <noscript><p>Galéria potrebuje zapnutý JavaScript. Ak ho zapnúť nemôžete, <a href="https://ig.me/m/jarofotos" rel="noopener">napíšte mi na Instagram</a> a fotky Vám pošlem inak.</p></noscript>
+    <form class="code" id="code-form" novalidate>
+      <label class="sr-only" for="code-input">{{gallery.inputLabel}}</label>
+      <input class="code__input" id="code-input" name="kod" type="text" placeholder="{{gallery.placeholder}}" autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <button class="btn" type="submit" id="code-submit">{{gallery.submit}}</button>
+    </form>
+    <p class="err" id="code-err" role="alert" hidden></p>
+    <button class="btn ghost gal__retry" type="button" id="retry" hidden>Skúsiť znova</button>
+    <p class="gal__status" id="status" role="status"></p>
+    <p class="kl__demo" id="demo-note" hidden>Ukážka: galéria ešte nie je prepojená s Google Diskom. Zadajte kód <b>UKAZKA</b> a otvorí sa ukážka s fotkami z portfólia.</p>
+    <p class="gal__note">{{gallery.note}}</p>
+  </div></section>
+
+  <section id="open" aria-labelledby="h-open" hidden><div class="wrap">
+    <header class="gal__head">
+      <a class="back" href="../">{{gallery.back}}</a>
+      <h1 id="h-open" tabindex="-1">{{gallery.openHeading}}</h1>
+      <p class="gal__meta" id="meta"></p>
+      <p class="kl__demo" id="demo-banner" hidden>Ukážka s fotkami z portfólia. Skutočná galéria sa načíta z Google Disku.</p>
+      <div class="gal__actions">
+        <button class="btn" id="all" type="button">{{gallery.downloadAll}}</button>
+      </div>
+    </header>
+    <p class="gal__empty" id="empty" hidden>{{gallery.empty}}</p>
+    <div class="masonry" id="grid"></div>
+  </div></section>
+
+</main>
+
+<div class="wrap"><footer class="foot"><span>{{footer.left}}</span><span>{{footer.right}}</span></footer></div>
+
+<!-- photos for the demo gallery (only used while config.js has no apiUrl); <template> content does not load -->
+<template id="demo-photos">{{#demo}}<a href="{{href}}">{{{img}}}</a>{{/demo}}</template>
+
+<script src="config.js"></script>
+<script src="{{R}}assets/js/lightbox.js"></script>
+<script src="galeria.js"></script>
+</body>
+</html>
